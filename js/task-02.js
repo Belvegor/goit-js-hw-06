@@ -9,9 +9,13 @@ const ingredients = [
   'Condiments',
 ];
 
+const elements = [];
+
 ingredients.forEach(ingredientName => {
   const li = document.createElement("li"); 
   li.textContent = ingredientName; 
   li.classList.add("item"); 
-  ingredientsList.appendChild(li); 
+  elements.push(li);
 });
+
+ingredientsList.append(...elements);
